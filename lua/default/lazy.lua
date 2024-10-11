@@ -5,8 +5,13 @@ if not vim.loop.fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
+-- local project_file = vim.fn.getcwd() .. '/project.godot'
+-- if project_file then
+--   vim.fn.serverstart './godothost'
+-- end
+
 require('lazy').setup({
-    import = "default.plugins"
+  import = 'default.plugins',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
